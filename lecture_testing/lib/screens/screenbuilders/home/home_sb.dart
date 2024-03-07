@@ -33,9 +33,9 @@ class _HomeScreenBuilderState extends State<HomeScreenBuilder> {
         return Scaffold(
           appBar: AppBar(
             actions: const [],
-            // backgroundColor: Colors.white30,
           ),
           drawer: sideDrawer,
+          endDrawer: sideDrawer,
           body: bodyContent,
         );
     });
