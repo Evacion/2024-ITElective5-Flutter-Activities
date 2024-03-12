@@ -1,20 +1,20 @@
-import 'package:excer1/screens/home_screen.dart';
+import 'package:excer1/screens/about_screen.dart';
 import 'package:excer1/widgets/sidedrawer.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreenBuilder extends StatefulWidget {
-  const HomeScreenBuilder({super.key});
+class AboutScreenBuilder extends StatefulWidget {
+  const AboutScreenBuilder({super.key});
 
   @override
-  State<HomeScreenBuilder> createState() => _HomeScreenBuilderState();
+  State<AboutScreenBuilder> createState() => _AboutScreenBuilderState();
 }
 
-class _HomeScreenBuilderState extends State<HomeScreenBuilder> {
+class _AboutScreenBuilderState extends State<AboutScreenBuilder> {
   @override
   Widget build(BuildContext context) {
     Orientation currOrientation = MediaQuery.of(context).orientation;
     const sideDrawer = SideDrawerCustom();
-    const bodyContent = HomeScreenWidget();
+    const bodyContent = AboutScreenWidget();
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
@@ -33,6 +33,7 @@ class _HomeScreenBuilderState extends State<HomeScreenBuilder> {
         return Scaffold(
           appBar: AppBar(
             actions: const [],
+            backgroundColor: Colors.white30,
           ),
           drawer: sideDrawer,
           endDrawer: sideDrawer,

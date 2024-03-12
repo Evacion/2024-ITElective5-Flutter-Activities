@@ -10,6 +10,10 @@ class NewsScreenWidget extends StatefulWidget {
 class _NewsScreenWidgetState extends State<NewsScreenWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Text("NEWS");
+    return const Center(
+      child: SingleChildScrollView(
+        child: Text("There is no News.\nWAKE UP SHEEPLE.")
+      )
+    );
   }
 }

@@ -15,36 +15,39 @@ class _SideDrawerCustomState extends State<SideDrawerCustom> {
         padding: const EdgeInsets.all(0),
         children: [
           ListTile(
-            title: const Text("Home"),
-            onTap: () {
+            title: Text("Home", style: TextStyle(color: ModalRoute.of(context)?.settings.name == '/home' ? Colors.grey: Colors.black),),
+            onTap: ModalRoute.of(context)?.settings.name == '/home' ? null : () {
               Navigator.pop(context);
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/home');
             },
           ),
           ListTile(
-            title: const Text("News"),
-            onTap: () {
+            title: Text("News", style: TextStyle(color: ModalRoute.of(context)?.settings.name == '/news' ? Colors.grey: Colors.black),),
+            onTap: ModalRoute.of(context)?.settings.name == '/news' ? null : () {
               Navigator.pop(context);
               Navigator.pushNamed(context, '/news');
             },
           ),
           ListTile(
-            title: const Text("About"),
-            onTap: () {
+            title: Text("About Us", style: TextStyle(color: ModalRoute.of(context)?.settings.name == '/about' ? Colors.grey: Colors.black),),
+            onTap: ModalRoute.of(context)?.settings.name == '/about' ? null : () {
               Navigator.pop(context);
               Navigator.pushNamed(context, '/about');
             },
           ),
           ListTile(
-            title: const Text("My Account"),
-            onTap: () {
+            title: Text("My Account", style: TextStyle(color: ModalRoute.of(context)?.settings.name == '/account' ? Colors.grey: Colors.black),),
+            onTap: ModalRoute.of(context)?.settings.name == '/account' ? null : () {
               Navigator.pop(context);
               Navigator.pushNamed(context, '/account');
             },
           ),
-          const ListTile(
-            title: Text("Logout"),
-            onTap: null,
+          ListTile(
+            title: const Text("Logout"),
+            onTap: () {
+              Navigator.popUntil(context, (route) => route.isFirst);
+              
+            },
           ),
           ListTile(
             title: CircleAvatar(
