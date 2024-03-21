@@ -11,6 +11,8 @@ class SignUpWidget extends StatefulWidget {
 class _SignUpWidgetState extends State<SignUpWidget> {
   @override
   Widget build(BuildContext context) {
-    return const SignUp();
+    return const Center(
+      child: SignUp()
+    );
   }
 }

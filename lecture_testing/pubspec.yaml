@@ -39,6 +39,10 @@ dependencies:
   image_card: ^0.0.4
   flutter_launcher_icons: ^0.13.1
   font_awesome_flutter: ^10.7.0
+  http: ^1.2.0
+  auto_size_text_field: ^2.2.3
+  auto_size_text: ^3.0.0
+  country_flags: ^2.2.0
 
 dev_dependencies:
   flutter_test:

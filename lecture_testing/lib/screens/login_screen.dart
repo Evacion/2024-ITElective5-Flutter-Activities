@@ -11,6 +11,11 @@ class LoginScreenWidget extends StatefulWidget {
 class _LoginScreenWidgetState extends State<LoginScreenWidget> {
   @override
   Widget build(BuildContext context) {
-    return LoginScreen(loginImage: Image.asset("lib/assets/arturia.webp").image);
+    return Center(
+      child: Container(
+        margin: const EdgeInsets.all(5),
+        child: LoginScreen(loginImage: Image.asset("lib/assets/arturia.webp").image)
+      ,),
+    );
   }
 }

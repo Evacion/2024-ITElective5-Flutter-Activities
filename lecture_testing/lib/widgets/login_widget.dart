@@ -1,5 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors
-
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -44,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       Expanded(
                         child: Container(
-                          margin: const EdgeInsets.fromLTRB(25,50,75,50),
+                          margin: const EdgeInsets.fromLTRB(15,15,35,15),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -167,7 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 40,),
+                                    // const SizedBox(height: 40,),
                                     Container(
                                       margin: const EdgeInsets.all(5),
                                       child: Row(
@@ -175,22 +174,20 @@ class _LoginScreenState extends State<LoginScreen> {
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children: [
                                           FloatingActionButton(
-                                            onPressed: () {
-                                              Navigator.pushNamed(context, '/home');
-                                            },
+                                            onPressed: () {Navigator.pushNamed(context, '/home');},
                                             child: const Icon(FontAwesomeIcons.google),
                                           ),
-                                          FloatingActionButton(
+                                          const FloatingActionButton(
                                             onPressed: null,
-                                            child: const Icon(FontAwesomeIcons.twitter),
+                                            child: Icon(FontAwesomeIcons.twitter),
                                           ),
-                                          FloatingActionButton(
+                                          const FloatingActionButton(
                                             onPressed: null,
-                                            child: const Icon(FontAwesomeIcons.yahoo),
+                                            child: Icon(FontAwesomeIcons.yahoo),
                                           ),
-                                          FloatingActionButton(
+                                          const FloatingActionButton(
                                             onPressed: null,
-                                            child: const Icon(FontAwesomeIcons.linkedinIn),
+                                            child: Icon(FontAwesomeIcons.linkedinIn),
                                           )
                                         ],
                                       ),
@@ -199,9 +196,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                               const Expanded(
-                                child: Text("By sign up you agree to our term and that you have read our data policy.", 
-                                  textScaler: TextScaler.linear(1),
-                                  textWidthBasis: TextWidthBasis.parent,
+                                child: AutoSizeText("By sign up you agree to our term and that you have read our data policy.", 
+                                  // textScaler: TextScaler.linear(1),
+                                  // textWidthBasis: TextWidthBasis.parent,
                                   style: TextStyle(
                                     color: Colors.grey,
                                   ),
@@ -241,7 +238,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Icon(Icons.play_arrow, color: Colors.white,),
                   ),
                 ),  
-              ) : Container(),
+              ) : SizedBox(
+                height: cardHeight < screenHeight ? cardHeight: screenHeight,
+                width: cardWidth < screenWidth ? cardWidth : screenWidth*0.75,
+              ),
             ],
           )
         );

@@ -11,6 +11,7 @@ class _SideDrawerCustomState extends State<SideDrawerCustom> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      shape: Border.all(width: 0),
       child: ListView(
         padding: const EdgeInsets.all(0),
         children: [

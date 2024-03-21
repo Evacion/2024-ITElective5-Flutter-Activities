@@ -36,7 +36,7 @@ class _AboutScreenBuilderState extends State<AboutScreenBuilder> {
             backgroundColor: Colors.white30,
           ),
           drawer: sideDrawer,
-          endDrawer: sideDrawer,
+          // endDrawer: sideDrawer,
           body: bodyContent,
         );
     });
